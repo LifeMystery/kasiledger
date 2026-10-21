@@ -1,0 +1,141 @@
+/* The counter book: a ruled exercise-book page with a red margin line. */
+.book {
+  --line-h: 2.6rem;
+  position: relative;
+  background: var(--surface);
+  border-radius: 4px 4px var(--radius-s) var(--radius-s);
+  box-shadow: 0 1px 0 var(--line), 0 10px 26px -18px rgba(21, 36, 29, 0.45);
+  overflow: hidden;
+}
+.book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4.9rem;
+  width: 2px;
+  background: var(--margin);
+  opacity: 0.75;
+  pointer-events: none;
+}
+.head {
+  display: grid;
+  grid-template-columns: 4.9rem 1fr auto;
+  padding: 0.7rem 1rem 0.5rem 0;
+  border-bottom: 2px solid var(--rule);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.head span:first-child {
+  padding-left: 1rem;
+}
+.right {
+  text-align: right;
+}
+.lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 560px;
+  overflow-y: auto;
+}
+.line,
+.emptyLine {
+  display: grid;
+  grid-template-columns: 4.9rem 1fr auto;
+  align-items: start;
+  min-height: var(--line-h);
+  padding: 0.55rem 1rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background-color 1.2s ease;
+}
+.emptyLine {
+  display: block;
+  padding-left: 6rem;
+  color: var(--ink-faint);
+}
+.time {
+  padding-left: 1rem;
+  color: var(--ink-faint);
+  font-size: 0.88rem;
+  padding-top: 0.1rem;
+}
+.entry {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.what {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.45rem;
+}
+.what strong {
+  font-weight: 700;
+}
+.source {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+.amount {
+  font-weight: 700;
+  font-size: 1.02rem;
+  text-align: right;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+.out {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+.okTag,
+.waitTag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+}
+.okTag {
+  background: var(--green-soft);
+  color: var(--green);
+}
+.waitTag {
+  background: #eef0ec;
+  color: var(--ink-soft);
+}
+.pending {
+  color: var(--ink-soft);
+}
+.pending .amount {
+  font-weight: 500;
+}
+.flagged {
+  background: var(--red-soft);
+}
+.flagged .amount {
+  color: var(--red);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.reason {
+  color: var(--red);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.fresh {
+  background: var(--yellow-soft);
+  animation: land 0.5s ease-out;
+}
+.flagged.fresh {
+  background: #f8d7d2;
+}
+@keyframes land {
+  from {
+    transform: translateY(-6px);
+    opacity: 0.2;
+  }
+}

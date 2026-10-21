@@ -1,0 +1,38 @@
+.bar {
+  display: flex;
+  gap: 2px;
+  height: 22px;
+  margin: 0.25rem 0 1rem;
+}
+.slot {
+  flex-basis: 0;
+  background: #e4e8e3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: var(--green);
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.label {
+  font-weight: 600;
+}
+.detail {
+  margin: 0.1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}

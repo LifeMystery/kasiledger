@@ -1,0 +1,84 @@
+.bar {
+  background: var(--ink);
+  color: #fff;
+}
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.7rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+.nav {
+  display: flex;
+  gap: 0.25rem;
+}
+.nav a {
+  color: #d5ddd8;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-s);
+  font-weight: 600;
+}
+.nav a:hover {
+  color: #fff;
+}
+.nav a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.picker select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border-radius: var(--radius-s);
+  padding: 0.35rem 0.6rem;
+}
+.picker option {
+  color: var(--ink);
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #d5ddd8;
+}
+.dotOn,
+.dotOff {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #6fd39b;
+}
+.dotOff {
+  background: #e0796f;
+}

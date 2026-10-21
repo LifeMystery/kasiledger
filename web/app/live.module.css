@@ -1,0 +1,80 @@
+.grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.phoneCol {
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+.switch {
+  display: flex;
+  background: #e6eae5;
+  border-radius: 999px;
+  padding: 3px;
+}
+.switch button {
+  border: none;
+  background: transparent;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+.switch button[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(21, 36, 29, 0.15);
+}
+.bookCol {
+  min-width: 0;
+}
+.title {
+  margin-bottom: 1.25rem;
+}
+.title p {
+  margin: 0.25rem 0 0;
+}
+.today {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 1.75rem;
+  border-top: 2px solid var(--ink);
+}
+.today div {
+  padding: 0.7rem 0.9rem 0.2rem 0;
+}
+.today dt {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.today dd {
+  margin: 0.1rem 0 0;
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 650;
+}
+.alert dd {
+  color: var(--red);
+}
+.bookTitle {
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .phoneCol {
+    position: static;
+  }
+  .today {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

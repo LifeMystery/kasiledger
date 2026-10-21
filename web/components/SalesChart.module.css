@@ -1,0 +1,53 @@
+.figure {
+  margin: 0;
+}
+.legend {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.wrap {
+  position: relative;
+}
+.wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.axis {
+  fill: var(--ink-faint);
+  font-size: 12px;
+  font-family: var(--body);
+}
+.tip {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-s);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  white-space: nowrap;
+}

@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+backend/.env
+backend/data/
+
+# Node
+web/node_modules/
+web/.next/
+web/.env.local
+web/next-env.d.ts
+web/tsconfig.tsbuildinfo
